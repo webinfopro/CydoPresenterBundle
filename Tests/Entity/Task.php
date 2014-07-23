@@ -2,7 +2,7 @@
 
 namespace Cydo\PresenterBundle\Tests\Entity;
 
-class Tag
+class Task
 {
     protected $name;
     protected $progress;
