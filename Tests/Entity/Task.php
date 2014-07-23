@@ -7,19 +7,23 @@ class Task
     protected $name;
     protected $progress;
 
-    public function setName($name) {
+    public function setName($name)
+    {
         $this->name = $name;
     }
 
-    public function getName() {
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function setProgress($progress) {
+    public function setProgress($progress)
+    {
         $this->progress = $progress;
     }
 
-    public function getProgress() {
+    public function getProgress()
+    {
         return $this->progress;
     }
 }

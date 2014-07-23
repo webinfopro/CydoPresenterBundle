@@ -1,0 +1,15 @@
+{
+    "name": "cydo/presenter-bundle",
+    "type": "symfony-bundle",
+    "description": "CydoPresenterBundle",
+    "keywords": ["views", "presenters"],
+    "authors": [
+        {
+            "name": "Thomas Royer"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Cydo\\PresenterBundle": "" }
+    },
+    "target-dir": "Cydo/PresenterBundle"
+}
