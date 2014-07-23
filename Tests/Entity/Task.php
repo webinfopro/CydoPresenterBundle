@@ -2,8 +2,12 @@
 
 namespace Cydo\PresenterBundle\Tests\Entity;
 
+use Cydo\PresenterBundle\Presenter\PresentableTrait;
+
 class Task
 {
+    use PresentableTrait;
+
     protected $name;
     protected $progress;
 
