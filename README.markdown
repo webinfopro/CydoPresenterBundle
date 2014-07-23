@@ -2,6 +2,7 @@ CydoPresenterBundle
 ===================
 
 [![Build Status](https://travis-ci.org/Cydonia7/CydoPresenterBundle.svg?branch=master)](https://travis-ci.org/Cydonia7/CydoPresenterBundle)
+
 [![SensioLabs Insight](https://insight.sensiolabs.com/projects/19d8452b-3553-4599-858b-75f3a5a7245b/big.png)](https://travis-ci.org/Cydonia7/CydoPresenterBundl://insight.sensiolabs.com/projects/19d8452b-3553-4599-858b-75f3a5a7245b)
 
 The CydoPresenterBundle allows you to easily use presenters in your Symfony2 application.
