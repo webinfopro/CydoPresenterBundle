@@ -2,7 +2,7 @@
     "name": "cydo/presenter-bundle",
     "type": "symfony-bundle",
     "description": "CydoPresenterBundle",
-    "license": "Creative Commons Attribution 4.0 International",
+    "license": "CC-BY-3.0",
     "keywords": ["views", "presenters"],
     "authors": [
         {
