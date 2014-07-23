@@ -25,6 +25,8 @@ It will install the bundle in the `vendor/cydo` directory of your project.
 
 ### Step 2 : Enable the bundle
 
+To enable the bundle, you have to register it in your application kernel like this :
+
 ``` php
 <?php
 // app/AppKernel.php
@@ -40,6 +42,44 @@ public function registerBundles()
 
 ### Step 3 : Create a presenter
 
+You can create a presenter for your model (or another object class). Here's an example code for a 
+presenter associated with a basic Task model (with attributes name and progress).
+
+``` php
+<?php
+// src/Acme/DemoBundle/Presenter/TaskPresenter.php
+
+use Cydo\PresenterBundle\Presenter\BasePresenter;
+
+class TaskPresenter extends BasePresenter
+{
+    public function getDisplayName()
+    {
+        return $this->object->getName() . ' (' . $this->object->getProgress() . '%)';
+    }
+}
+```
+
 ### Step 4 : Use the presenters in your views
 
-### Examples
+To use the presenter in your views, you just have to pass `new TaskPresenter($task)` to your view instead of just `$task`.
+
+You do not have to change your previous template code since all the methods you don't redefine in the presenter are handled by the model automatically.
+
+For instance, with the presenter defined above you can do things like
+
+```twig
+{{ task.name }} ({{ task.progress }} %)
+is equivalent to
+{{ task.displayName }}
+```
+
+### Step 5 : Advanced use
+
+Sometimes you want some attribute of your model to stay the same in the code and always appear in another way in the views.
+
+Imagine you have a model with a money attribute, you want your model's `getMoney()` to return a floating number but you would like 
+your view to display it like $ 9.45.
+
+You can do that by creating a `getMoney()` method in your presenter. The model will still have its getter return the floating number 
+while the presenter will return you the money formatted as you like when you do in Twig `{{ object.money }}`.
