@@ -55,7 +55,7 @@ class TaskPresenter extends BasePresenter
 {
     public function getDisplayName()
     {
-        return $this->object->getName() . ' (' . $this->object->getProgress() . '%)';
+        return $this->object->getName() . ' (' . $this->object->getProgress() . ' %)';
     }
 }
 ```
