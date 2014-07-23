@@ -16,7 +16,12 @@ You can begin to use it quickly with 4 easy steps.
 
 ### Step 1 : Download CydoPresenterBundle using composer
 
-Composer support to be done.
+You can add the bundle to your project using the following command :
+```
+php composer.phar require cydo/presenter-bundle dev-master
+```
+
+It will install the bundle in the `vendor/cydo` directory of your project.
 
 ### Step 2 : Enable the bundle
 
