@@ -64,6 +64,11 @@ class TaskPresenter extends BasePresenter
 
 To use the presenter in your views, you just have to pass `new TaskPresenter($task)` to your view instead of just `$task`.
 
+You can define a simple method `presenter()` in your model that returns a `TaskPresenter` associated to the current instance.
+It is also possible to use the `PresenterTrait` included in the bundle that will implement this method provided it finds the associated presenter.
+
+For instance, if your model is `Acme\DemoBundle\Entity\Task`, the autoloaded presenter would be `Acme\DemoBundle\Presenter\TaskPresenter`.
+
 You do not have to change your previous template code since all the methods you don't redefine in the presenter are handled by the model automatically.
 
 For instance, with the presenter defined above you can do things like
