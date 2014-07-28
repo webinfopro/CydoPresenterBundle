@@ -2,6 +2,8 @@
 
 namespace Cydo\PresenterBundle\Presenter;
 
+use Cydo\PresenterBundle\Exception\PresenterNotFoundException;
+
 trait PresentableTrait
 {
     public function presenter()
@@ -16,7 +18,7 @@ trait PresentableTrait
 
         if (!class_exists($class))
         {
-            throw new \Exception('Unable to automatically find the presenter class associated to this object.');
+            throw new PresenterNotFoundException('Unable to automatically find the presenter class associated to this object.');
         }
 
         return $class;

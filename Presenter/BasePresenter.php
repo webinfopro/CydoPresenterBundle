@@ -2,6 +2,8 @@
 
 namespace Cydo\PresenterBundle\Presenter;
 
+use Cydo\PresenterBundle\Exception\MethodNotFoundException;
+
 class BasePresenter
 {
     protected $object;
@@ -21,7 +23,7 @@ class BasePresenter
         }
         else
         {
-            throw new \Exception('No such method ' . $methodName . ' neither in the object nor in the presenter.');
+            throw new MethodNotFoundException('No such method ' . $methodName . ' neither in the object nor in the presenter.');
         }
     }
 }

@@ -21,7 +21,7 @@ class PresenterTest extends PHPUnit_Framework_TestCase
 
     public function testNonExistentMethod()
     {
-        $this->setExpectedException('Exception');
+        $this->setExpectedException('Cydo\\PresenterBundle\\Exception\\MethodNotFoundException');
         $this->taskPresenter->getDescription();
     }
 
